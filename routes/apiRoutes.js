@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 const fs = require('fs');
-
+const database = require('../db/db.json')
 
 router.get('./notes', (req, res) => {
     database = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'));
